@@ -1,10 +1,12 @@
 def hitung_hapus():
-    q = input("Masukan Kalimat: ")
-    w1 = int(input("Index Start: "))
-    w2 = int(input("Index Stop: "))
-    hasil = ((w1-w2+1)/len(q))*100
-    if hasil < 0:
-        return 0.0
-    else:
-        return hasil
+  q = input("Masukan Kalimat :")
+  w1 = int(input("Start index :"))
+  w2 = int(input("Stop index  :"))
+
+  total_jumlah_data = str(len(q))
+  temp = q[w1-1:w2]
+  dihapus = str(len(temp))
+  hasil = (int(dihapus)/int(total_jumlah_data))*100
+  return hasil
+
 print(hitung_hapus())
